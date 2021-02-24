@@ -1,0 +1,44 @@
+backup
+
+<div id="containerImagenesCategoria">
+            <div class="container-img-large">
+                <a href="">
+                    <img class="img-large" src="img-large.jpg">
+                </a>
+                <div class="justify-left-large">
+                    <h4>USD 15.45</h4>
+                    <button class="btn-bestseller">Bestseller</button>
+                </div>
+            </div>
+            <a href="" class="container-img-small">
+                <img class="img-small" src="img-small.jpg">
+                <div class="justify-left-small">
+                    <h4>USD 15.45</h4>
+                    <button class="btn-bestseller">Bestseller</button>
+                </div>
+                <img class="img-small" src="img-small.jpg">
+                <div class="justify-left-small">
+                    <h4>USD 15.45</h4>
+                </div>
+            </a>
+            <div class="container-img-large">
+                <a href="">
+                    <img class="img-large" src="img-large.jpg">
+                </a>
+                <div class="justify-left-large">
+                    <h4>USD 15.45</h4>
+                </div>
+            </div>
+            <a href="" class="container-img-small">
+                <img class="img-small" src="img-small.jpg">
+                <div class="justify-left-small">
+                    <h4>USD 15.45</h4>
+                    <button class="btn-freeshiping">FREE shipping</button>
+                </div>
+                <img class="img-small" src="img-small.jpg">
+                <div class="justify-left-small">
+                    <h4>USD 15.45</h4>
+                    <button class="btn-freeshiping">FREE shipping</button>
+                </div>
+            </a>
+        </div>

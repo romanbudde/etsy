@@ -1,5 +1,5 @@
 @media (min-width: 973px) {
-    .fa-bars{
+    header{
         display: none;
     }
 
@@ -131,6 +131,10 @@
 }
 
 @media (max-width: 973px) {
+    header{
+        display:flex;
+    }
+
     #nav{
         margin-left: 20px;
         display:flex;
@@ -948,4 +952,227 @@ textarea:focus, input:focus, button:focus{
 #lower-right > h5{
     color:white;
     font-weight: 400;
+}
+
+/* #ulCategorias{
+    
+}
+
+#ulCategorias li{
+    
+}
+
+#ulCategorias li::before{
+    content: 'x';
+    display: block;
+
+}
+
+#ulCategorias li::after{
+    content: 'asd';
+    display: block;
+} */
+
+/* #ulCategorias li a{ */
+    /* transition: all 0.5s; */
+/* } */
+
+/* #ulCategorias li a:hover{
+    text-decoration: underline;
+    background-color: burlywood;
+    padding: 5px 5px;
+} */
+
+.sr-only{
+    position:absolute;
+    width: 1px;
+    height: 1px;
+    padding:0;
+    margin: -1px;
+    overflow: hidden;
+    clip: rect(0,0,0,0);
+    border:0;
+}
+
+/* Button styling */
+
+.menu-toggle{
+    display: inline-block;
+    line-height: 1em;
+    font-size: 1em;
+    color: #333;
+}
+
+.menu-toggle:hover{
+    color: rgb(209, 17, 17);
+}
+
+/*
+ Default styles + Mobile first
+ Offscreen menu style
+*/
+
+.main-menu{
+    position: absolute;
+    display: none;
+    left: -200px;
+    top: 0;
+    height: 100%;
+    overflow-x: visible;
+    overflow-y: scroll;
+    transition: left 0.3s ease;
+    z-index: 999;
+}
+
+.main-menu ul{
+    list-style: none;
+    margin: 0;
+    padding: 0em 0 0;
+     /* Hide shadow w/ -8px while 'closed' */
+    /* -webkit-box-shadow: -8px 0 8px rgba(0,0,0,.5);
+    -moz-box-shadow: -8px 0 8px rgba(0,0,0,.5);
+    box-shadow: -8px 0 8px rgba(0,0,0,.5); */
+    min-height: 100%;
+    width: 320px;
+    background: white;
+}
+
+.main-menu ul li:hover{
+    background-color: rgba(117, 117, 117, 0.12);
+}
+
+.main-menu ul li a{
+    display:flex;
+    align-items: center;
+    justify-content: flex-start;
+}
+
+.fa-chevron-right{
+    font-size:13px;
+    margin-left: auto;
+    padding-right: 4px;
+}
+
+.main-menu div{
+    width:100%;
+    height:10%;
+    z-index:9999;
+    background-color: white;   
+    position:relative;
+    left:0;
+    top:0;
+    display:flex;
+    align-items: center;
+}
+
+.main-menu img{
+    position: absolute;
+    z-index: 9999;
+    padding-left: 7px;
+    width:25%;
+}
+
+.main-menu a{
+    display: block;
+    padding: .75em 15px;
+    line-height: 1.5em;
+    color: black;
+    text-decoration: none;
+    font-size: 18px;
+    letter-spacing: 0.5px;
+}
+
+.main-menu .menu-close{
+    position: absolute;
+    right: 10px;
+    border-radius: 30px;
+    transition: all 0.3s;
+}
+
+.main-menu h3{
+    background-color: white;
+    margin:0;
+    padding: 10px 10px;
+}
+
+.main-menu div a{
+    padding:12px 17px;
+}
+
+.menu-close:hover{
+    background-color: rgba(117, 117, 117, 0.12);
+}
+
+header{
+    align-items: baseline;
+}
+
+article{
+    padding: 30px;
+    width: 55em;
+    font-size: 16px;
+    line-height: 1.5em;
+}
+
+article h2{
+    font-weight: 500;
+    font-size: 28px;
+}
+  
+.logo {
+margin: 0 30px 0 10px;
+font-size: 1.5em;
+}
+
+/*
+ :target for non-JavaScript
+ [aria-expanded] will be used if/when JavaScript is added to improve interaction, 
+ though it's completely optional.
+*/
+
+.main-menu:target,
+.main-menu[aria-expanded="true"]{
+    display:block;
+    left: 0;
+    outline: none;
+    -moz-box-shadow: 3px 0 12px rgba(0,0,0,.25);
+    -webkit-box-shadow: 3px 0 12px rgba(0,0,0,.25);
+    box-shadow: 3px 0 12px rgba(0,0,0,.25);
+} 
+
+.main-menu:target .menu-close,
+.main-menu[aria-expanded="true"] .menu-close{
+    z-index: 1001;
+}
+
+.main-menu:target ul,
+.main-menu[aria-expanded="true"] ul{
+    position: relative;
+    z-index: 1000;
+}
+
+.main-menu:target + .backdrop,
+.main-menu[aria-expanded="true"] + .backdrop{
+    position: absolute;
+    display: block;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    z-index: 998;
+    background-color: #000;
+    background: rgba(0,0,0,.55);
+    cursor: default;
+}
+
+@supports (position:fixed){
+    .main-menu,
+    .main-menu:target + .backdrop,
+    .main-menu[aria-expanded="true"] + .backdrop{
+        position: fixed;
+    }
+}
+
+.fa-close{
+    font-size: 22px;
 }
